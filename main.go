@@ -117,9 +117,13 @@ func restart_cmd(ip *string) {
 	start.Stderr = os.Stderr
 	if err := enable.Run(); err != nil {
 		fmt.Println(errors.New("error has occured while enabling the service"))
+	} else {
+		fmt.Println("Success enabling service agent")
 	}
 	if err := start.Run(); err != nil {
 		fmt.Println(errors.New("error has occured while starting the service"))
+	} else {
+		fmt.Println("Success enabling service agent")
 	}
 	//enable.Run()
 }
